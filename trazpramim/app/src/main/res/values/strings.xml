@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">trazpramim</string>
+    <string name="seachtab_buscar">Buscar</string>
+    <string name="contentdescription_search_button">search button</string>
+    <string name="contentdescription_filter_button">filter button</string>
+    <string name="contentdescription_shopping_cart">shopping cart</string>
 </resources>

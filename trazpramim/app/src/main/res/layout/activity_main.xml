@@ -1,18 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/teal_grayish_background"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            style="@style/SearchBarBackground"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                style="@style/SearchBarTextSpace"
+                android:id="@+id/edittextsearchbar"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="queijo"
+                android:backgroundTint="@color/white"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:gravity="start"
+                android:hint="@string/seachtab_buscar"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingVertical="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/teal_letters"
+                android:textColorHint="@color/gray_light_letters"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/buttonsearch"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="-80dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/search_bar"
+                android:contentDescription="@string/contentdescription_search_button" />
+
+            <ImageButton
+                android:id="@+id/buttonfilter"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/filter_menu"
+                android:contentDescription="@string/contentdescription_filter_button" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/shopping_cart_bar"
+                android:contentDescription="@string/contentdescription_shopping_cart" />
+
+
+        </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+                style="@style/ContainerProducts"
+                android:id="@+id/recycleviewsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:layout_marginTop="90dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edittextsearchbar" />
+
+
+    <LinearLayout
+        style="@style/SearchBarBackground"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/buttonhome"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/contentdescription_search_button"
+            app:srcCompat="@drawable/home_menu" />
+
+        <ImageButton
+            android:id="@+id/buttonsearchup"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/contentdescription_filter_button"
+            app:srcCompat="@drawable/search_menu" />
+
+        <ImageButton
+            android:id="@+id/buttonmessage"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/contentdescription_filter_button"
+            app:srcCompat="@drawable/messages_menu" />
+
+    </LinearLayout>
+
+</LinearLayout>
