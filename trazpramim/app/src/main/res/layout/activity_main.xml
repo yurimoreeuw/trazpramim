@@ -79,12 +79,9 @@
         </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleviewsearch"
-        style="@style/ContainerProducts"
-        android:layout_width="wrap_content"
+        android:id="@+id/rv_product_item"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="196dp"
-        android:layout_marginBottom="264dp"
         app:layout_constraintBottom_toTopOf="@+id/product_search_menu"
         app:layout_constraintTop_toBottomOf="@+id/product_search_searchbar"
         app:layout_constraintStart_toStartOf="parent"
